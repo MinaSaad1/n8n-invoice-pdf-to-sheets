@@ -115,7 +115,7 @@ Once you trust one round trip, activate the workflow. The Drive trigger polls ev
 - **Slack alert on duplicate**: add a Slack `Send Message` node on the duplicate branch, after `Log Duplicate Warning`. Useful when AP staff want to know the moment a vendor double-bills.
 - **Approval threshold**: insert an IF node after `Parse Invoice JSON`. Route invoices over a threshold (e.g. 1,000 USD) to a Slack approval message instead of straight into the sheet.
 - **Multi-currency normalization**: add an HTTP Request node that hits an exchange rate API after parsing, write a normalized USD column to the sheet alongside the original.
-- **Different model**: swap `claude-sonnet-4-5` for `claude-haiku-4-5` if you want to halve the cost. Haiku handles machine-generated invoices fine and only loses ground on heavily scanned or low-resolution PDFs.
+- **Different model**: swap `claude-sonnet-4-6` for `claude-sonnet-4-6` if you want to halve the cost. Haiku handles machine-generated invoices fine and only loses ground on heavily scanned or low-resolution PDFs.
 - **QuickBooks or Xero instead of Sheets**: replace the two `Append` nodes with their accounting-software equivalents. The parse node's output already matches the field set those APIs expect.
 
 ## Troubleshooting

@@ -53,7 +53,7 @@ The `file_id` stays attached so the Sheets row can link back to the source PDF i
 
 ### Claude Extract Invoice (`HTTP Request` node)
 
-Posts to `https://api.anthropic.com/v1/messages` with a `document` content block containing the base64 PDF and a single `text` block with the extraction prompt. The model is `claude-sonnet-4-5` by default, swap to `claude-haiku-4-5` for cost-sensitive deployments.
+Posts to `https://api.anthropic.com/v1/messages` with a `document` content block containing the base64 PDF and a single `text` block with the extraction prompt. The model is `claude-sonnet-4-6` by default, swap to `claude-sonnet-4-6` for cost-sensitive deployments.
 
 The prompt asks for a strict JSON object with vendor, invoice number, dates, totals, currency, and line items. It also tells the model to treat any instructions inside the PDF text as data, not commands. That last line is a soft defense against prompt injection, see `SECURITY.md` for why it's not enough on its own.
 

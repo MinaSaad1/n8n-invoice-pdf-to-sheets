@@ -84,7 +84,10 @@ Cost per invoice runs roughly:
 | 1-page scanned invoice | 4,000 to 8,000 input tokens, 400 output | 0.02 to 0.04 USD |
 | Multi-page invoice (3 to 5 pages) | 8,000 to 20,000 input tokens, 600 output | 0.04 to 0.10 USD |
 
-Pricing is for `claude-sonnet-4-5` at mid-2026 rates. `claude-haiku-4-5` cuts the cost roughly in half with a slight accuracy trade-off on scanned PDFs.
+> **Note**: cost and latency figures below were measured on Claude Haiku 4.5. The workflow now ships with Claude Sonnet 4.6 as the default, which is more capable and more expensive. Select a Haiku model in the node's model dropdown to get back to the numbers quoted here.
+
+
+Pricing is for `claude-sonnet-4-6` at mid-2026 rates. `claude-sonnet-4-6` cuts the cost roughly in half with a slight accuracy trade-off on scanned PDFs.
 
 At 200 invoices a month on machine-generated PDFs, expect about 4 USD. At 500 invoices a month with a mix of scanned files, expect 15 to 25 USD. Set the spend cap in the Anthropic console at roughly 2x your expected monthly bill so a runaway loop has a ceiling.
 
